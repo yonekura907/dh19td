@@ -6,7 +6,21 @@
 &nbsp;
 
 ## TouchDesignerについて
-DERIVATIVE社からリリースされているリアルタイム・ビジュアル・プログラミングツール。機能を持ったオペレーターと呼ばれるノードを繋いでいきながら作品を作る。
+[DERIVATIVE](https://www.derivative.ca/)社からリリースされているリアルタイム・ビジュアル・プログラミングツール。機能を持ったオペレーターと呼ばれるノードを繋いでいきながら作品を作る。
+
+&nbsp;
+&nbsp;
+
+
+## 事例紹介
+<iframe src="https://player.vimeo.com/video/260321687" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/260321687">Interactive dance installation - Cinedans</a> from <a href="https://vimeo.com/teamgorobot">Go Robot.</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+
+<iframe src="https://player.vimeo.com/video/236541585" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/236541585">BEYOND CASSINI</a> from <a href="https://vimeo.com/wowinc">WOW inc</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P01zFlcD9r4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 &nbsp;
 &nbsp;

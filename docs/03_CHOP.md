@@ -11,6 +11,52 @@
 ## 公式リファレンス
 [CHOP - Channel Operators](https://docs.derivative.ca/CHOP)
 
+---
+
+&nbsp;
+&nbsp;
+
+# OP
+
+&nbsp;
+&nbsp;
+
+
+## Audio Device In
+- Trail 数値の推移を視覚
+- Null 
+  - 最後に付ける
+  - 値をExportする
+- Switch 分岐
+- Expression 条件分岐 if文が書ける
+
+- Login
+- Mouse In 
+  - Select チャンネルを任意で絞る
+- Lag　数値の変化を滑らかに
+
+&nbsp;
+&nbsp;
+
+## Audio Device Out
+
+音の出力
+
+&nbsp;
+&nbsp;
+
+## Audio Oscllator
+
+音響合成
+
+&nbsp;
+&nbsp;
+
+## Audio Spectrum
+
+FFT周波数分析をする
+
+![](img/audiospect_chop.png)
 
 
 &nbsp;
@@ -24,43 +70,54 @@
 
 ![](img/constant_chop1.png)
 
+&nbsp;
+&nbsp;
 
+## Count
 
+数値を増減していく
+
+![](img/count_chop.png)
+
+* Limit で最小値と最大値を設定
 
 &nbsp;
 &nbsp;
 
-## Math
+## Delay
 
-### OP
-- `Combile Channels` `Combile CHOPs`から四則演算
+遅延
 
-### Mult-Add
-
-- `Multiply`で数値を掛け算
-
-### Range
-
-- `From Range`の値を`To Range`にマッピングする
-
+![](img/delay_chop.png)
 
 &nbsp;
 &nbsp;
 
+## Expression 
 
-## Noise
--1から1の間で自然な乱数を生成する。
+条件を分岐するオペレーター
 
-![](img/noise_chop1.png)
+![](img/expression_chop0.png)
 
-`Time Slise`を`On`にすると連続で値を返す
+```
+//10以上になったら1を返す
+me.inputVal > 10
 
-![](img/noise_chop2.png)
+```
 
+&nbsp;
 
+![](img/expression_chop2.png)
+
+```
+//30以上の場合は値が1、そうじゃない場合は0
+1 if me.inputVal >= 30 else 0
+
+```
 
 &nbsp;
 &nbsp;
+
 
 ## Filter
 
@@ -72,31 +129,6 @@
 ## Lag
 
 時間を設定して数値が変動する。初速終速を調整できる。
-
-&nbsp;
-&nbsp;
-
-## Limit
-
-入力値に最大・最小の制限をつける
-
-&nbsp;
-&nbsp;
-
-
-## Speed
-
-時間内に数値が変化する
-第1入力に値が送られると毎秒1カウントづつ増加します。
-
-<img src="img/speed_chop1.png" width="400">
-
-&nbsp;
-
-![](img/speed_chop2.png)
-
-第2入力に0が送られるとリセットする
-
 
 &nbsp;
 &nbsp;
@@ -122,7 +154,181 @@
 * `Frequency` 周期
 * `Amplitude` 振幅
 
-![](img/lfo_chop2.png)
+
+&nbsp;
+&nbsp;
+
+
+## Limit
+
+入力値に最大・最小の制限をつける
+
+&nbsp;
+&nbsp;
+
+
+## Logic
+
+入力値を論理演算する
+
+![](img/logic_chop.png)
+
+* Convert Input
+	* `Off When Zero`	入力が0の時False、それ以外はTrue
+* Combine CHOPs
+	* `And` 論理積　いずれも 1 の場合にTrue
+	* `Or` 論理和　どちらかが 1 の場合にTrue
+
+[参考:TouchDesignerでの論理演算](https://qiita.com/joe0hara/items/82f5de39ff82873e994b)
+
+&nbsp;
+&nbsp;
+
+
+## Math
+
+![](img/math_chop1.png)
+
+### OP
+- 複数のOPをつなぎ `Combile CHOPs` から四則演算
+
+### Mult-Add
+
+- `Multiply`で数値を掛け算
+
+### Range
+
+- `From Range`の値を`To Range`にマッピングする
+
+
+&nbsp;
+&nbsp;
+
+## Merge
+
+複数のCHOPの値をひとつにまとめる
+
+![](img/merge_chop.png)
+
+
+&nbsp;
+&nbsp;
+
+## Mouse In
+
+マウス座標
+
+![](img/mousein_chop.png)
+
+
+&nbsp;
+&nbsp;
+
+
+## Noise
+-1から1の間で自然な乱数を生成する。
+
+![](img/noise_chop1.png)
+
+`Time Slise`を`On`にすると連続で値を返す
+
+![](img/noise_chop2.png)
+
+
+&nbsp;
+&nbsp;
+
+# Null
+
+何もないOP、前のOPのデータを引き継ぐ。
+TouchDesignerでは出力前や最後のOPをNullにする
+
+&nbsp;
+&nbsp;
+
+
+## OSC In
+
+OSC 通信
+
+![](img/oscin_chop.png)
+
+
+
+&nbsp;
+&nbsp;
+
+## Parameter
+
+特定のOPからパラメーターを出力する
+
+![](img/par_chop.png)
+
+* `Operators` 任意のOPをドラッグ
+* `Built-in` を `On` に
+* `Parameters` で出力したいパラメータを指定
+
+&nbsp;
+&nbsp;
+
+## Pattern
+
+周期をつくる
+
+&nbsp;
+&nbsp;
+
+## Perform
+
+パフォーマンスを計測する
+
+![](img/perform_chop.png)
+
+&nbsp;
+&nbsp;
+
+## Rename
+
+チャンネル名を変える
+
+&nbsp;
+&nbsp;
+
+
+## Select
+
+チャンネルを絞る
+
+![](img/select_chop.png)
+
+Audioから片方のチャンネルを絞る
+
+![](img/select_chop2.png)
+
+OSCからひとつのチャンネルを絞る
+
+&nbsp;
+&nbsp;
+
+## Shuffle
+
+入力した値を並べ替える
+
+&nbsp;
+&nbsp;
+
+## Speed
+
+時間内に数値が変化する
+第1入力に値が送られると毎秒1カウントづつ増加します。
+
+<img src="img/speed_chop1.png" width="400">
+
+&nbsp;
+
+![](img/speed_chop2.png)
+
+第2入力に0が送られるとリセットする
 
 
 &nbsp;
@@ -130,46 +336,13 @@
 
 
 
+## Slope
 
-## Expression 
-
-
-条件を分岐するオペレーター
-
-
-
-![](img/expression_chop0.png)
-
-```
-//10以上になったら1を返す
-me.inputVal > 10
-
-```
-
-&nbsp;
-
-![](img/expression_chop2.png)
-
-```
-//30以上の場合は値が1、そうじゃない場合は0
-1 if me.inputVal >= 30 else 0
-
-```
-
-
-&nbsp;
-
-| Expression  |  |
-|---|---|
-|absTime.frame  |現在のフレーム番号を取得  |
-|absTime.seconds |経過時間を取得  |
-|me.digits | opの番号を取得（constant1の場合は1）|
-|me.inputVal | 入力値を取得する |
-|op('name').par[0] もしくは op('name').par.parname|オペレーターのパラメーターを取得 |
-
+入力値を微分する
 
 &nbsp;
 &nbsp;
+
 
 ## Trail
 
@@ -181,16 +354,12 @@ me.inputVal > 10
 &nbsp;
 &nbsp;
 
-## Slope
 
-入力値を微分する
+## TimeSlice
 
-&nbsp;
-&nbsp;
+時間変化を生成する
 
-## Logic
-
-入力値を論理演算する
+![](img/wave_chop.png)
 
 &nbsp;
 &nbsp;
@@ -206,52 +375,9 @@ me.inputVal > 10
 &nbsp;
 
 
-## Count
 
-数値を増減していく
+## Wave
 
+周期を作る
 
-![](img/count_chop.png)
-
-
-
-* Limit で最小値と最大値を設定
-
-&nbsp;
-&nbsp;
-
-
-## Audio Device In
-- Trail 数値の推移を視覚
-- Null 
-  - 最後に付ける
-  - 値をExportする
-- Switch 分岐
-- Expression 条件分岐 if文が書ける
-
-- Login
-- Mouse In 
-  - Select チャンネルを任意で絞る
-- Lag　数値の変化を滑らかに
-
-&nbsp;
-&nbsp;
-
-## Audio Spectrum
-FFT周波数分析をする
-
-![](img/audiospect_chop.png)
-
-
-&nbsp;
-&nbsp;
-
-
-## Select
-
-チャンネルを絞る
-
-![](img/select_chop.png)
-
-&nbsp;
-&nbsp;
+![](img/wave_chop.png)
