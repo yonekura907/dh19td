@@ -14,8 +14,12 @@
 &nbsp;
 &nbsp;
 
+---
 
-## text
+# OP
+
+
+## Text
 
 テキストデータ
 
@@ -34,7 +38,7 @@ print( op('constant1').par.value0 )
 
 
 
-## table
+## Table
 行列のテーブル
 
 ![](img/table_dat.png)
@@ -49,36 +53,61 @@ print( op('constant1').par.value0 )
 
 
 
+## Serial
+
+シリアル通信
 
 
-### absTime.seconds
-TouchDesignerが起動してからの経過時間
+### Arduino と　TouchDesignerの連携
 
+#### Arduino
 
+![](img/arduino_prototyping05.png)
+![](img/arduino.png)
 
+```
+//A0
+int sensor = 0;
+//つまみの値
+int val = 0;
 
-## 座標移動
+void setup() {
+  //シリアル通信を開始
+  Serial.begin(9600);
+}
 
-`Circle TOP`の中心座標を移動
+void loop() {
+  // A0つまみの値を読み取る
+  val = analogRead(sensor);
+  // シリアルモニタで確認
+  Serial.println(val);
+}
+```
 
-	op('circle1').par.centerx = -0.5
-	
 &nbsp;
 
-`Circle TOP`の中心座標を`Constant CHOP`の値*2に移動
+#### TouchDesigner
 
-	op('circle1').par.centerx = op('constant1')['chan1'] * 2
+##### 1 `Port` を指定する
 
+![](img/serial_dat1.png)
 
 &nbsp;
 
-`Circle TOP`の中心座標を`Constant CHOP`の値*2に移動
 
-	op('circle1').par.centerx = op('constant1')['chan1'] * 2
-	
+##### 2 Select DATで1行分取得
+
+![](img/serial_dat2.png)
+
+* Select Cols：by Index
+* Start Row Index：1
+* End Row Index：1
+
 &nbsp;
 
-`Circle TOP`の中心座標をランダム値に移動
-	
-	import random
-	op('circle1').par.centerx = random.random()
+##### 3 DAT to CHOPで値を取得
+
+![](img/serial_dat3.png)
+
+* DAT：`select1`
+* First Column is：`Values`

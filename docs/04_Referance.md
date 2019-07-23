@@ -4,7 +4,7 @@
 
 パラメータの値の参照方法
 
-### コピーによる参照方法
+## コピーによる参照方法
 
 1.参照元のパラメータ上で`Copy Parameter`
 
@@ -13,7 +13,7 @@
 &nbsp;
 &nbsp;
 
-### ソースによる参照方法
+## ソースによる参照方法
 
 
 同じパネルの値を参照したい場合
@@ -48,19 +48,28 @@ op('constant1').par.value0
 
 ![](img/chop_reference1.png)
 
+&nbsp;
+
 2 出力先のNull1_CHOPをアクティブモードに変更
 
 ![](img/chop_reference2.png)
+
+&nbsp;
 
 3 出力先の Null1_CHOP から Circle_TOP の`centerx`にドラッグ
 
 ![](img/chop_reference3.png)
 
+&nbsp;
+
 4 マウスを離して`Export CHOP`　か `CHOP Reference` を選択 
 
 ![](img/chop_reference4.png)
 
-`Export CHOP` は固定値、 `CHOP Reference` はphytonで演算が可能。
+* `Export CHOP` は固定値
+* `CHOP Reference` はphytonで演算が可能。こちらを推奨
+
+&nbsp;
 
 5 データリンクが生成、Null1_CHOPの値が反映される
 
@@ -92,7 +101,7 @@ op('null1')['tx']
 
 
 
-
+<!--
 ## 座標移動
 
 `Circle TOP`の中心座標を移動
@@ -126,6 +135,7 @@ op('circle1').par.centerx = op('constant1')['chan1'] * 2
 import random
 op('circle1').par.centerx = random.random()
 ```
+-->
 
 &nbsp;
 &nbsp;

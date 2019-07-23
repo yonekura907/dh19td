@@ -5,6 +5,8 @@
 * [TouchDesignerについて](docs/01_Basic.md)
 * [TOP](docs/02_TOP.md)
 * [CHOP](docs/03_CHOP.md)
+* [Reference](docs/04_Referance.md)
+* [OSC](docs/00_OSC.md)
 
 &nbsp;
 &nbsp;

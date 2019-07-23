@@ -29,6 +29,21 @@
 * Environment Map 環境マップ
 
 
+### Diffuse
+ジオメトリの色
+
+### Specular
+反射光の強度
+
+### Emit
+発光色の強度
+
+
+### Shininess
+表面の滑らかさ
+
+
+
 &nbsp;
 &nbsp;
 

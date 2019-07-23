@@ -23,17 +23,7 @@
 
 
 ## Audio Device In
-- Trail 数値の推移を視覚
-- Null 
-  - 最後に付ける
-  - 値をExportする
-- Switch 分岐
-- Expression 条件分岐 if文が書ける
-
-- Login
-- Mouse In 
-  - Select チャンネルを任意で絞る
-- Lag　数値の変化を滑らかに
+音の入力
 
 &nbsp;
 &nbsp;
@@ -142,14 +132,12 @@ me.inputVal > 10
 
 * `Type` 周波数の形
 
-| LFO Type  | 説明  |
-|---|---|---|
-| Sin | サイン波　-1 から 1の繰り返し |
-| Gaussian |  0-1-0の繰り返し | 
-| Triangle | 三角波　-1 から 1の繰り返し |
-| Ramp | 0-1 の繰り返し| 
-| Square | 矩形波　-1 から 1の繰り返し |
-| Pulse | 点滅　-1 から 1の繰り返し |
+	* `Sin` サイン波 -1 から 1の繰り返し
+	* `Gaussian` 0-1-0の繰り返し
+	* `Triangle` 三角波　-1 から 1の繰り返し
+	* `Ramp` 0-1 の繰り返し
+	* `Square` 矩形波　-1 から 1の繰り返し
+	* `Pulse` 点滅　-1 から 1の繰り返し
 
 * `Frequency` 周期
 * `Amplitude` 振幅
@@ -173,9 +161,9 @@ me.inputVal > 10
 
 ![](img/logic_chop.png)
 
-* Convert Input
+* `Convert Input`
 	* `Off When Zero`	入力が0の時False、それ以外はTrue
-* Combine CHOPs
+* `Combine CHOPs`
 	* `And` 論理積　いずれも 1 の場合にTrue
 	* `Or` 論理和　どちらかが 1 の場合にTrue
 
@@ -238,7 +226,7 @@ me.inputVal > 10
 &nbsp;
 &nbsp;
 
-# Null
+## Null
 
 何もないOP、前のOPのデータを引き継ぐ。
 TouchDesignerでは出力前や最後のOPをNullにする
