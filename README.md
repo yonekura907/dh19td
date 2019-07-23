@@ -22,10 +22,9 @@
 
 ## 参考
 
-* [映像音響処理概説 2019](http://satoruhiga.com/TDWS2019/)
-* [TouchDesignerのドキュメント(日本語)]()
 * [Visual Thinking with TouchDesigner　プロが選ぶリアルタイムレンダリング＆プロトタイピングの極意](https://www.amazon.co.jp/dp/B075L6DRBW)
 * [Matthew Ragan](https://www.youtube.com/channel/UCKAAKTI2xLNNBJRkdf8E58A)
+* [映像音響処理概説 2019](http://satoruhiga.com/TDWS2019/)
 * [Generative Design
 ](http://www.derivative.ca/wiki088/index.php?title=Generative_Design)
 * [TouchDesigner in Asia](http://www.touchdesigner.co/)
