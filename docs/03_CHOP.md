@@ -342,6 +342,60 @@ OSCからひとつのチャンネルを絞る
 &nbsp;
 &nbsp;
 
+## Timer
+タイマー
+
+![](img/timer_chop.png)
+
+* `Initialize` 初期化
+* `Start` 開始
+* `Length` タイマーの長さ
+* `Speed` 速さ
+* `Cue`
+* `Cycle` 繰り返しの回数指定
+* `On Done`の項目から`Re-Start`でループし続ける
+
+
+```
+# タイマーイベント
+
+def onInitialize(timerOp):
+	return 0
+
+def onReady(timerOp):
+	return
+	
+def onStart(timerOp):
+	return
+	
+def onTimerPulse(timerOp, segment):
+	return
+
+def whileTimerActive(timerOp, segment, cycle, fraction):
+	return
+
+def onSegmentEnter(timerOp, segment, interrupt):
+	return
+	
+def onSegmentExit(timerOp, segment, interrupt):
+	return
+
+def onCycleStart(timerOp, segment, cycle):
+	return
+
+def onCycleEndAlert(timerOp, segment, cycle, alertSegment, alertDone, interrupt):
+	return
+	
+def onCycle(timerOp, segment, cycle):
+	return
+
+def onDone(timerOp, segment, interrupt):
+	return
+	
+```
+
+&nbsp;
+&nbsp;
 
 ## TimeSlice
 

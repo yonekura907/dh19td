@@ -44,6 +44,20 @@
 
 3Dオブジェクト用のカメラ
 
+![](img/camera_comp.png)
+
+* Look At 被写体の向き
+
+
+[3Dの仕組み](00_3D.md)
+
+&nbsp;
+
+### Geometry Viewer
+
+カメラのオブジェクトの座標を確認できる
+
+![](img/geometry_viewer.png)
 
 &nbsp;
 &nbsp;
@@ -67,10 +81,14 @@
 
 
 
-## Geometory
+## Geometry
 
 SOPの3Dオブジェクトを格納する
 
+![](img/geometry_comp.png)
+
+3Dの表示には`Camera` `Light` `Geometry`の3つのCOMPが必要になる。
+3D空間を2Dに変換するのが`Render TOP`
 
 &nbsp;
 &nbsp;
@@ -85,7 +103,11 @@ SOPの3Dオブジェクトを格納する
 &nbsp;
 
 
+## Panels
 
+
+&nbsp;
+&nbsp
 
 ## Slider
 スライダー

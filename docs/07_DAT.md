@@ -49,7 +49,52 @@ print( op('constant1').par.value0 )
 &nbsp;
 
 
+## Evaluate
 
+
+&nbsp;
+&nbsp;
+
+## Execute
+
+
+```
+
+def onStart():
+	return
+
+def onCreate():
+	return
+
+def onExit():
+	return
+
+# 
+def onFrameStart(frame):
+	return
+
+def onFrameEnd(frame):
+	return
+
+def onPlayStateChange(state):
+	return
+
+def onDeviceChange():
+	return
+
+def onProjectPreSave():
+	return
+
+def onProjectPostSave():
+	return
+
+	
+
+```
+
+
+&nbsp;
+&nbsp;
 
 
 

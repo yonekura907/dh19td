@@ -7,6 +7,8 @@
 * [CHOP](docs/03_CHOP.md)
 * [Reference](docs/04_Referance.md)
 * [OSC](docs/00_OSC.md)
+* [SOP](docs/05_SOP.md)
+* [3D](docs/00_3D.md)
 
 &nbsp;
 &nbsp;
