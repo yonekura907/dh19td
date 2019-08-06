@@ -9,6 +9,9 @@
 * [OSC](docs/00_OSC.md)
 * [SOP](docs/05_SOP.md)
 * [3D](docs/00_3D.md)
+* [MAT](docs/06_MAT.md)
+* [DAT](docs/07_DAT.md)
+* [COMP](docs/08_COMP.md)
 
 &nbsp;
 &nbsp;
