@@ -116,6 +116,13 @@ me.inputVal > 10
 &nbsp;
 &nbsp;
 
+## Hold
+
+入力値を保持する
+
+&nbsp;
+&nbsp;
+
 ## Lag
 
 時間を設定して数値が変動する。初速終速を調整できる。
